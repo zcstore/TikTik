@@ -18,10 +18,10 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - We started with the Navbar and Sidebar components, basic Navbar with just logo for now since it does not make sense for user, and search until we have a main page. The Sidebar includes multiple links, and shows a lot more for xl devices, and has the google login functionality which for now is for show only. The other components in the sidebar are Discover, For you accounts and Footer
 - In the discover section, we first use router to grab data from the route we're on.
 - Moving on to the main page of the site, the videos, we start using NextJs server side rendering with
-## export const getServerSideProps = async () => {
-##  const response = await axios.get(`http://localhost:3000/api/post`);
-## }
-## Careful with http vs https on local host,  encountering errors is common
+- export const getServerSideProps = async () => {
+-  const response = await axios.get(`http://localhost:3000/api/post`);
+- }
+- Careful with http vs https on local host,  encountering errors is common
 - NextJs uses file based routing, based on the api in pages
 - Then in the api for post, we're going to use the sanity client defined in the utils for our endpoint api. From sanity we grab the client id and add a cors origin for our application host. Now that we are getting the data back as videos, we need as per TypeScript, define the type in an interface at types.d.ts, d from development
 - In the main, based on videos returned, we get a NoResults component or a map of VideoCard components, which also shows the user image. Note here, you might get an error, nextjs config needs to know what domain it supports images from, so you need to add whatever error comes up
