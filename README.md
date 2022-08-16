@@ -32,3 +32,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - Now moving on to the upload page, we make a new page and add simple functionality for upload there thanks to Sanity
 - For another page we have the video details page, which takes advantage of Next file based routing and in a folder named details we have a [id].tsx which can be routed easily
 - We've also added another id type to the api for this page, getting a specific video.
+- To end with the deployment, we want Vercel, which is easy to use with Github, and all you have to do after building it, is add the enviromental variables you have in our project in Vercel
